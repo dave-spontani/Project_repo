@@ -16,3 +16,5 @@ st.write(even_list)
 
 st.write(odd_list)
 
+st.write("A short demonstration of why list comprehensions are superior!")
+
