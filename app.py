@@ -4,7 +4,6 @@ from Feature_02 import return_odd
 import random
 import matplotlib as plt
 
-
 original_list = [i for i in range(10)]
 
 even_list = return_even(original_list)
