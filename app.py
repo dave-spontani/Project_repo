@@ -24,4 +24,6 @@ st.write("A short demonstration of why list comprehensions are superior!")
 st.write(random.randint(0,20))
 
 st.write("Cheese is fantastic!")
+
 st.write("This is revolution!")
+
