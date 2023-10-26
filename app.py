@@ -14,7 +14,7 @@ st.write("First things first: Select thine cheese preferences")
 cheese_type = st.radio(
     "Which cheese calls to you",
     ["Hardcore Swiss traditionalist", "Visiting tourist", "American glutton"],
-    captions = ["Wilkomme Eidgenoss!", "I hope you are not lactose intolerant", "Your cheese isn't actually cheese, but okay"])
+    captions = ["Wilkomme Eidgenoss!", "Welcome to Sqitzerland", "Your cheese isn't actually cheese, but okay"])
 
 
 number_input = st.number_input("Enter how many friends will partake in your fondue (whole numbers only please):", min_value=1, max_value=15, value=5, step=1)
