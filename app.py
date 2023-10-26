@@ -5,25 +5,10 @@ import random
 import matplotlib.pyplot as plt
 import math
 
-original_list = [i for i in range(10)]
+st.set_page_config(page_title="Fondue Optimizer", page_icon=":cheese:")
 
-even_list = return_even(original_list)
+number_input = st.number_input("Enter how much cheese in total you will add (in Grams)")
 
-odd_list = return_odd(original_list)
+st.write("We will now calculate the rest of the ingredients for your ideal recipe!")
 
-st.write("Hooray, we connected everything")
-
-st.write("Hello_02")
-
-st.write(even_list)
-
-st.write(odd_list)
-
-st.write("A short demonstration of why list comprehensions are superior!")
-
-st.write(random.randint(0,20))
-
-st.write("Cheese is fantastic!")
-
-st.write("This is revolution!")
 
