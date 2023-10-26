@@ -17,7 +17,7 @@ cheese_type = st.radio(
     captions = ["Wilkomme Eidgenoss!", "I hope you are not lactose intolerant", "Your cheese isn't actually cheese, but okay"])
 
 
-number_input = st.number_input("Enter how many friends will partake in your fondue (whole numbers only please):")
+number_input = st.number_input("Enter how many friends will partake in your fondue (whole numbers only please):", value = "int")
 
 hunger_level = st.radio("Are you and your friends hungry hungry hippos or trendy fashionistas on a diet?", 
                         ["We have small tummies", "I would like to have room for dessert", "Put me in a coma"])
