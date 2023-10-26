@@ -44,7 +44,7 @@ if st.button('Get recipe'):
         st.write(f"{total/2}g of Gruyère cheese (mild)")
         st.write(f"{total/2}g of Vacherin fribourgeois cheese (strong)")
         st.write(f"Add {wine}dl of white wine (Fondent du Valais is ideal)")
-        st.write(f"And don't forget to add {maizena}Tea-spoons of Maizena")
+        st.write(f"And don't forget to add {maizena} Tea-spoons of Maizena")
 
     elif cheese_type == "Visiting tourist":
 
@@ -52,7 +52,7 @@ if st.button('Get recipe'):
         st.write(f"{total/2}g of Swiss mountain cheese (mild)")
         st.write(f"{total/2}g of Gruyère cheese (mild)")
         st.write(f"Add {wine}dl of white wine (Fondent du Valais is ideal)")
-        st.write(f"And don't forget to add {maizena}Tea-spoons of Maizena")
+        st.write(f"And don't forget to add {maizena} Tea-spoons of Maizena")
 
 
     elif cheese_type == "American glutton":
@@ -60,4 +60,7 @@ if st.button('Get recipe'):
         st.write(f"{total/2}g of Cheddar")
         st.write(f"{total/2}g of 'Swiss' cheese (whatever that means)")
         st.write(f"Add {wine}dl of white wine (Fondent du Valais is ideal)")
-        st.write(f"And don't forget to add {maizena}Tea-spoons of Maizena")
+        st.write(f"And don't forget to add {maizena} Tea-spoons of Maizena")
+
+    st.write("People usually also like to add pepper and nutmeg - don't be shy in spicing things up!")
+    st.write("Enjoy!")
