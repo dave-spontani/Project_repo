@@ -35,32 +35,32 @@ st.write("Check that all of your imputs are correct! Once you have verified this
 if st.button('Get recipe'):
 
     total = level * number_input
-    wine = total * 0.004
+    wine = float(total * 0.0044)
     maizena = total // 250
     st.subheader("We will now calculate the rest of the ingredients for your ideal recipe!", divider='red')
 
     if cheese_type == "Hardcore Swiss traditionalist":
         st.write("Moitie-moitie is an excellent fondue mix. Go buy:")
-        st.write(f"{total/2}g of Gruyère cheese (mild)")
-        st.write(f"{total/2}g of Vacherin fribourgeois cheese (strong)")
-        st.write(f"Add {wine}dl of white wine (Fondent du Valais is ideal)")
-        st.write(f"And don't forget to add {maizena} Tea-spoons of Maizena")
+        st.write(f"{int(total/2)}g of Gruyère cheese (mild)")
+        st.write(f"{int(total/2)}g of Vacherin fribourgeois cheese (strong)")
+        st.write(f"Add {wine} dl of white wine (Fondent du Valais is ideal)")
+        st.write(f"And don't forget to add {maizena} tea-spoons of Maizena")
 
     elif cheese_type == "Visiting tourist":
 
         st.write("We will get you started with some simple cheesy goodness:")
-        st.write(f"{total/2}g of Swiss mountain cheese (mild)")
-        st.write(f"{total/2}g of Gruyère cheese (mild)")
-        st.write(f"Add {wine}dl of white wine (Fondent du Valais is ideal)")
-        st.write(f"And don't forget to add {maizena} Tea-spoons of Maizena")
+        st.write(f"{int(total/2)}g of Swiss mountain cheese (mild)")
+        st.write(f"{int(total/2)}g of Gruyère cheese (mild)")
+        st.write(f"Add {wine} dl of white wine (Fondent du Valais is ideal)")
+        st.write(f"And don't forget to add {maizena} tea-spoons of Maizena")
 
 
     elif cheese_type == "American glutton":
         st.write("I disapprove of your lifestyle choices. I just want you to know. Go get")
-        st.write(f"{total/2}g of Cheddar")
-        st.write(f"{total/2}g of 'Swiss' cheese (whatever that means)")
-        st.write(f"Add {wine}dl of white wine (Fondent du Valais is ideal)")
-        st.write(f"And don't forget to add {maizena} Tea-spoons of Maizena")
+        st.write(f"{int(total/2)}g of Cheddar")
+        st.write(f"{int(total/2)}g of 'Swiss' cheese (whatever that means)")
+        st.write(f"Add {wine} dl of white wine (Fondent du Valais is ideal)")
+        st.write(f"And don't forget to add {maizena} tea-spoons of Maizena")
 
     st.write("People usually also like to add pepper and nutmeg - don't be shy in spicing things up!")
     st.write("Enjoy!")
