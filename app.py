@@ -35,7 +35,7 @@ st.write("Check that all of your imputs are correct! Once you have verified this
 if st.button('Get recipe'):
 
     total = level * number_input
-    wine = total * 0.4
+    wine = total * 0.004
     maizena = total // 250
     st.subheader("We will now calculate the rest of the ingredients for your ideal recipe!", divider='red')
 
