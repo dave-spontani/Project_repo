@@ -36,7 +36,7 @@ if st.button('Get recipe'):
 
     total = level * number_input
     wine = round(total * 0.0044, 1)
-    maizena = total // 250
+    maizena = total // 200
     st.subheader("We will now calculate the rest of the ingredients for your ideal recipe!", divider='red')
 
     if cheese_type == "Hardcore Swiss traditionalist":
