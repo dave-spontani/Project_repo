@@ -9,7 +9,13 @@ st.set_page_config(page_title="Fondue Optimizer", page_icon=":cheese:")
 
 st.title("Welcome to the Fondue Optimizer!")
 
-st.write("Fiest things first: Do you like french cheese?")
+st.write("First things first: Select thine cheese preferences")
+
+cheese_type = st.radio(
+    "Which cheese calls to you",
+    ["Hardcore Swiss traditionalist", "Visiting tourist", "American glutton"],
+    captions = ["Wilkomme Eidgenoss!", "I hope you are not lactose intolerant", "Your cheese isn't actually cheese, but okay"])
+
 
 number_input = st.number_input("Enter how much cheese in total you will add (in Grams)")
 
