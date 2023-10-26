@@ -7,7 +7,7 @@ import math
 
 st.set_page_config(page_title="Fondue Optimizer")
 
-st.title("Welcome to the Fondue Optimizer! :cheese:")
+st.title("Welcome to the Fondue Optimizer! :cheese_wedge:")
 
 st.write("First things first: Select thine cheese preferences")
 
@@ -37,7 +37,7 @@ if st.button('Get recipe'):
     total = level * number_input
     wine = total * 0.4
     maizena = total // 250
-    st.subheader("We will now calculate the rest of the ingredients for your ideal recipe!")
+    st.subheader("We will now calculate the rest of the ingredients for your ideal recipe!", divider='red')
 
     if cheese_type == "Hardcore Swiss traditionalist":
         st.write("Moitie-moitie is an excellent fondue mix. Go buy:")
