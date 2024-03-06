@@ -10,7 +10,7 @@ st.set_page_config(page_title="Rent-a-Swiss-boyfriend :cheese_wedge:")
 
 st.title("Welcome to the Rent-a-Swiss-boyfriend - your solution to finding your dream cheese-loving gentleman")
 
-st.write("First things first: Select thine cheese preferences")
+st.write("First things first: Select your ideal match")
 
 man_type = st.radio(
     "Which Swiss dream man calls to you",
