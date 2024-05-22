@@ -22,9 +22,8 @@ firstreport = CH_Report(name, type)
 
 
 if st.button("Submit"):
-    print("Test")
-    print(type)
-
+    st.write(type)
+    st.write(firstreport.information)
         
 
 
