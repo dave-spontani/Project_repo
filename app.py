@@ -20,10 +20,10 @@ type = st.radio("What is your compliance type?",["EU", "CH", "US"])
 
 firstreport = CH_Report(name, type)
 
-button = st.button("Submit")
 
-if button:
+if st.button("Submit"):
     print("Test")
+
         
 
 
