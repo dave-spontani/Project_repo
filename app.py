@@ -1,7 +1,5 @@
 import streamlit as st
 
-
-
 info_dict = {"C02_Emissions": "", "Number of Women in Leadership positions": "", "Anti-Corruption measures": ""}
 
 class CH_Report:
