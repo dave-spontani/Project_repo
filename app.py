@@ -11,8 +11,6 @@ class Gen_Report:
         self.code = z
         self.information = info_dict
 
-
-
 tab1, tab2, tab3 = st.tabs(["Basic Questionnaire", "Report_Design", "Fill in values"])
 
 with tab1:
@@ -24,8 +22,7 @@ with tab1:
 
     type = st.radio("What is your compliance region you need to report in?",["EU", "CH", "US"])
 
-    sic_code = st.text_input("Please input your company's SIC code (Operating Area)")
-    
+    sic_code = st.selectbox("What industry do you operate in?",("Agriculture", "Mining", "Finance"))
 
     firstreport = Gen_Report(name, type, sic_code)
 
@@ -44,9 +41,28 @@ with tab2:
     st.write("As a company operating in the Swiss market, you must comply with the new laws governing ESG reporting as listed in CO Article 956c and beyond")
     st.write("We will help you become compliant by showing you what the law demands, tailor strategies for compliance, and give you an overview how other companies in your sector address these problems")
 
+    st.write(f"The sector you selected is {firstreport.code}")
+    if firstreport.code == "Mining":
+        st.write("Mining operations and other extractive industries need to report on additional compliance topics.")
+        st.write("We will guide you through these steps during the selection process")
+    else:
+        pass
+
+    st.header("Framework")
+    st.write("Most companies choose a specific framework they want to follow. While this is not strictly necessary under the Code of Obligations, it is encouraged")
+    st.write("We can help you on your journey to set up framework-compliance - or you can choose to fulfil the legal obligations solely by following the letter of the law (OR compliance)")
+    st.write("Frameworks are typically a lot more time intensive and comprehensive than OR-Compliance, but do enjoy a greater scope and cohesive reporting strategy")
+    sic_code = st.selectbox("Please choose the type of compliance you want to have",("OR-compliance"))
 
 
 
+    st.header("Environmental Reporting")
+
+
+    st.header("Social Reporting")
+
+
+    st.header("Governance Reporting")
 with tab3:
     st.write(firstreport.information)
 
