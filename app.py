@@ -52,11 +52,12 @@ with tab2:
     st.write("Most companies choose a specific framework they want to follow. While this is not strictly necessary under the Code of Obligations, it is encouraged")
     st.write("We can help you on your journey to set up framework-compliance - or you can choose to fulfil the legal obligations solely by following the letter of the law (OR compliance)")
     st.write("Frameworks are typically a lot more time intensive and comprehensive than OR-Compliance, but do enjoy a greater scope and cohesive reporting strategy")
-    st.write()
     compliance_type = st.selectbox("Please choose the type of compliance you want to have",["OR-compliance", ""])
 
     st.write("You have chosen your compliance type and given us your industry you are working in.")
     st.write("Based on the law, these are the broad areas you must report progress in. We will show you what legal provsions you must comply with, and what KPI's othe companies use in order to comply:")
+    st.write("We will guide you through the best selection process for your reporting goals")
+
 
     st.header("Environmental Reporting")
     st.write("The legal provision to supply Environmental Reporting is blah blah blah")
@@ -77,8 +78,7 @@ with tab2:
     st.write("Et cetera....")
 
 with tab3:
-    st.write(firstreport.information)
-
+    st.write()
         
 
 
