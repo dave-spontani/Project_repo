@@ -63,19 +63,19 @@ with tab2:
         st.write("The legal provision to supply Environmental Reporting is blah blah blah")
         st.write("Concretely, this means you need to track progress in this field. Most companies in your field have X KPI in this reporting criteria. Here is a selection of KPI that other companies in your area use in order to comply with this requirement:")
         options1 = st.selectbox("What Env KPI's do you want to choose for your report",[list(info_dict.keys())[0]])
-
+        st.write("Et cetera....")
 
         st.header("Social Reporting")
         st.write("The legal provision to supply Environmental Reporting is blah blah blah")
         st.write("Concretely, this means you need to track progress in this field. Most companies in your field have X KPI in this reporting criteria. Here is a selection of KPI that other companies in your area use in order to comply with this requirement:")
         options2 = st.selectbox("What Social KPI's do you want to choose for your report",[list(info_dict.keys())[1]])
-
+        st.write("Et cetera....")
 
         st.header("Governance Reporting")
         st.write("The Governance provision to supply Social Reporting is blah blah blah")
         st.write("Concretely, this means you need to track progress in this field. Most companies in your field have X KPI in this reporting criteria. Here is a selection of KPI that other companies in your area use in order to comply with this requirement:")
         options3 = st.selectbox("What Governance KPI's do you want to choose for your report",[list(info_dict.keys())[2]])
-
+        st.write("Et cetera....")
 
 with tab3:
     st.write(firstreport.information)
