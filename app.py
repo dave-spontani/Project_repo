@@ -55,7 +55,7 @@ with tab2:
     st.write()
     compliance_type = st.selectbox("Please choose the type of compliance you want to have",["OR-compliance", ""])
 
-    if st.button("Submit_again") & compliance_type == "OR-Compliance":
+    if st.button("Submit_again"):
         st.write("You have chosen your compliance type and given us your industry you are working in.")
         st.write("Based on the law, these are the broad areas you must report progress in. We will show you what legal provsions you must comply with, and what KPI's othe companies use in order to comply:")
 
