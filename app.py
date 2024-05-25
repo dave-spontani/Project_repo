@@ -16,6 +16,7 @@ tab1, tab2, tab3 = st.tabs(["Basic Questionnaire", "Report_Design", "Fill in val
 with tab1:
     st.title("Welcome to the Obli-Gator!")
     st.write("We munch and crunch your lame paperwork for you so you can focus on providing the best ESG reports for your company")
+    st.image('obligator.jpg', caption='Our trusty Obli-Gator hard at work')
     st.write("This tool will help you with designing, setting up and drafting your ESG reports in both human-readable and machine-readable formats!")
     st.header("First, let us get started on some questions")
 
