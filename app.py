@@ -56,7 +56,7 @@ with tab2:
 
     st.write("You have chosen your compliance type and given us your industry you are working in.")
     st.write("Based on the law, these are the broad areas you must report progress in. We will show you what legal provsions you must comply with, and what KPI's othe companies use in order to comply:")
-    st.write("We will guide you through the best selection process for your reporting goals")
+    st.write("We will guide you through the best selection process for your reporting goals. Choose KPI you are certain you can obtain within your company")
 
 
     st.header("Environmental Reporting")
@@ -77,8 +77,16 @@ with tab2:
     options3 = st.selectbox("What Governance KPI's do you want to choose for your report",[list(info_dict.keys())[2]])
     st.write("Et cetera....")
 
+
+    st.write("Here it would be nice to have a sort of Tracker that tells you how comprehensive the reporting is. We can weigh different KPI and based on these scores and show people how well they are doing comparatively")
+
 with tab3:
-    st.write()
+    st.write("Now that you have selected the report framework and the KPI you want to focus on, we can move to building the report!")
+
+    st.write("Please input the values for your chosen KPI.")
+
+
+    st.write("No time to do this now -but you get the gist, this is the actual building section of the whole solution.")
         
 
 
