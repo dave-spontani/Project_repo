@@ -10,20 +10,33 @@ class CH_Report:
         self.type = y
         self.information = info_dict
 
-st.title("Welcome to the Obli-Gator!")
-
-st.header("First, let us get started on some questions")
-
-name = st.text_input("What is the name of your company?")
-
-type = st.radio("What is your compliance type?",["EU", "CH", "US"])
-
-firstreport = CH_Report(name, type)
 
 
-if st.button("Submit"):
+tab1, tab2, tab3 = st.tabs(["Questionnaire", "KPI Selection", "Fill in values"])
+
+with tab1:
+    st.title("Welcome to the Obli-Gator!")
+
+    st.header("First, let us get started on some questions")
+
+    name = st.text_input("What is the name of your company?")
+
+    type = st.radio("What is your compliance type?",["EU", "CH", "US"])
+
+    firstreport = CH_Report(name, type)
+
+
+    if st.button("Submit"):
+        st.write(type)
+        st.write(firstreport.information)
+
+with tab2:
     st.write(type)
+
+
+with tab3:
     st.write(firstreport.information)
+
         
 
 
