@@ -54,15 +54,26 @@ with tab2:
     st.write("Frameworks are typically a lot more time intensive and comprehensive than OR-Compliance, but do enjoy a greater scope and cohesive reporting strategy")
     sic_code = st.selectbox("Please choose the type of compliance you want to have",("OR-compliance"))
 
+    if sic_code == "OR-Compliance":
+        st.write("You have chosen your compliance type and given us your industry you are working in.")
+        st.write("Based on the law, these are the broad areas you must report progress in. We will show you what legal provsions you must comply with, and what KPI's othe companies use in order to comply:")
+
+        st.header("Environmental Reporting")
+        st.write("The legal provision to supply Environmental Reporting is blah blah blah")
 
 
-    st.header("Environmental Reporting")
 
 
-    st.header("Social Reporting")
+        st.header("Social Reporting")
+        st.write("The legal provision to supply Social Reporting is blah blah blah")
 
 
-    st.header("Governance Reporting")
+
+        st.header("Governance Reporting")
+        st.write("The Governance provision to supply Social Reporting is blah blah blah")
+
+
+
 with tab3:
     st.write(firstreport.information)
 
