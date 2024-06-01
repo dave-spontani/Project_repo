@@ -71,13 +71,13 @@ with tab2:
     st.write("Et cetera....")
 
     st.header("Social Reporting")
-    st.write("The legal provision to supply Environmental Reporting is blah blah blah")
+    st.write("The legal provision to supply Social Reporting is blah blah blah")
     st.write("Concretely, this means you need to track progress in this field. Most companies in your field have X KPI in this reporting criteria. Here is a selection of KPI that other companies in your area use in order to comply with this requirement:")
     options2 = st.selectbox("What Social KPI's do you want to choose for your report",[list(info_dict.keys())[1]])
     st.write("Et cetera....")
 
     st.header("Governance Reporting")
-    st.write("The Governance provision to supply Social Reporting is blah blah blah")
+    st.write("The Governance provision to supply Governance Reporting is blah blah blah")
     st.write("Concretely, this means you need to track progress in this field. Most companies in your field have X KPI in this reporting criteria. Here is a selection of KPI that other companies in your area use in order to comply with this requirement:")
     options3 = st.selectbox("What Governance KPI's do you want to choose for your report",[list(info_dict.keys())[2]])
     st.write("Et cetera....")
@@ -107,10 +107,13 @@ with tab3:
     run1 = p1.add_run(f"This report was prepared for compliance with {compliance_type}")
 
     p2 = doc_download.add_paragraph()
-    run2 = p2.add_run(f"This year, the company reports of the ")
+    run2 = p2.add_run(f"This year, the company chose {options1} as its KPI for the Environmental part. It produced {kpi1} this year")
 
     p3 = doc_download.add_paragraph()
-    run3 = p3.add_run(f"This report was prepared for compliance with {compliance_type}")
+    run3 = p3.add_run(f"This the company chose {options2} as its KPI for the Social component. IT has a quota of {kpi2}")
+
+    p3 = doc_download.add_paragraph()
+    run3 = p3.add_run(f"This the company chose {options3} as its KPI for the Governance component. IT has managed to fulfil {kpi3}")
 
     bio = io.BytesIO()
     doc_download.save(bio)
