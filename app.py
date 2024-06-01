@@ -106,8 +106,8 @@ with tab3:
 
 
         
-    ## Save the template for downloading
-    report_final = 1
+    # ## Save the template for downloading
+    # report_final = 1
 
-    ## Creating download button with the updated notebook
-    st.download_button("Download report basis", report_final, "Word.docx")
+    # ## Creating download button with the updated notebook
+    # st.download_button("Download report basis", report_final, "Word.docx")
