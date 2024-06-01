@@ -91,7 +91,7 @@ with tab3:
 
     st.number_input(f"Please input the value for the following KPI: {options2}")
 
-    st.number_input(f"Please input any value for the following KPI: {options2}")
+    st.number_input(f"Please input any value for the following KPI: {options3}")
 
     st.write("No time to do this now -but you get the gist, this is the actual building section of the whole solution.")
         
