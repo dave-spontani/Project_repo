@@ -80,9 +80,10 @@ with tab2:
     st.write("Et cetera....")
 
 
-    st.write("Here it would be nice to have a sort of Tracker that tells you how comprehensive the reporting is. We can weigh different KPI and based on these scores and show people how well they are doing comparatively")
-
 with tab3:
+    st.write("An additional functionality would be to compare these figures against your competition in your sector.")
+    st.write("Based on this, you could then change your reports to things where your KPI are above/below the benchmark")
+
     st.write("Now that you have selected the report framework and the KPI you want to focus on, we can move to building the report!")
 
     st.write("Please input the values for your chosen KPI.")
@@ -93,7 +94,7 @@ with tab3:
 
     st.number_input(f"Please input any value for the following KPI: {options3}")
 
-    st.write("No time to do this now -but you get the gist, this is the actual building section of the whole solution.")
+
         
     ## Save the template for downloading
     report_final = 1
