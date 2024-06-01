@@ -1,4 +1,5 @@
 import streamlit as st
+import docx
 
 info_dict = {"C02_Emissions in Megatonnes this year": "", "Number of Women in Leadership positions as a percentage": "", "Anti-Corruption initiatives launches this year": ""}
 
@@ -93,6 +94,15 @@ with tab3:
     st.number_input(f"Please input the value for the following KPI: {options2}")
 
     st.number_input(f"Please input any value for the following KPI: {options3}")
+
+    ###Create the report:
+    doc = docx.Document()
+
+    p0 = doc.add_paragraph()
+    run0 = p0.add_run(f"Report of {name} for the {type}")
+
+    p1 = doc.add_paragraph()
+    run1 = p1.add_run(f"This report was prepared for compliance with {compliance_type} ")
 
 
         
