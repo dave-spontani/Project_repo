@@ -95,5 +95,8 @@ with tab3:
 
     st.write("No time to do this now -but you get the gist, this is the actual building section of the whole solution.")
         
+    ## Save the template for downloading
+    report_final = 1
 
-
+    ## Creating download button with the updated notebook
+    st.sidebar.download_button("Download documented notebook", report_final, ".ipynb", "application/x-ipynb+json")
