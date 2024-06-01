@@ -1,6 +1,6 @@
 import streamlit as st
 import docx
-
+import pandas as pd 
 import io
 
 info_dict = {"C02_Emissions in Megatonnes this year": "", "Number of Women in Leadership positions as a percentage": "", "Anti-Corruption initiatives launches this year": ""}
@@ -92,10 +92,17 @@ with tab3:
     st.write("Please input the values for your chosen KPI.")
 
     kpi1 = st.number_input(f"Please input a value for the following KPI: {options1}")
+    info_dict[options1] = kpi1
 
     kpi2 = st.number_input(f"Please input the value for the following KPI: {options2}")
+    info_dict[options2] = kpi2
 
     kpi3 = st.number_input(f"Please input any value for the following KPI: {options3}")
+    info_dict[options3] = kpi3
+
+
+    #############Create the machine-readable part:
+
 
     ###Create the report:
     doc_download = docx.Document()
@@ -115,11 +122,20 @@ with tab3:
     p3 = doc_download.add_paragraph()
     run3 = p3.add_run(f"This the company chose {options3} as its KPI for the Governance component. IT has managed to fulfil {kpi3}")
 
+    csv = pd.DataFrame(info_dict)
+
+    st.download_button(
+        label="Download the Machine-Readable Report",
+        data=csv,
+        file_name="large_df.csv",
+        mime="text/csv",
+    )
+
     bio = io.BytesIO()
     doc_download.save(bio)
     if doc_download:
         st.download_button(
-            label="Click here to download",
+            label="Click here to download the human readable report",
             data=bio.getvalue(),
             file_name="Report.docx",
             mime="docx"
