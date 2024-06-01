@@ -122,7 +122,7 @@ with tab3:
     p3 = doc_download.add_paragraph()
     run3 = p3.add_run(f"This the company chose {options3} as its KPI for the Governance component. IT has managed to fulfil {kpi3}")
 
-    csv = pd.DataFrame(info_dict)
+    csv = pd.DataFrame(info_dict, index=["KPI", "Value"])
 
     st.download_button(
         label="Download the Machine-Readable Report",
