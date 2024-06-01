@@ -99,4 +99,4 @@ with tab3:
     report_final = 1
 
     ## Creating download button with the updated notebook
-    st.download_button("Download documented notebook", report_final, ".ipynb", "application/x-ipynb+json")
+    st.download_button("Download report basis", report_final, "Word.docx")
