@@ -98,15 +98,13 @@ with tab3:
     st.number_input(f"Please input any value for the following KPI: {options3}")
 
     ###Create the report:
-    doc = docx.Document()
+    doc_download = docx.Document()
 
-    p0 = doc.add_paragraph()
+    p0 = doc_download.add_paragraph()
     run0 = p0.add_run(f"Report of {name} for the {type}")
 
-    p1 = doc.add_paragraph()
+    p1 = doc_download.add_paragraph()
     run1 = p1.add_run(f"This report was prepared for compliance with {compliance_type} ")
-
-    doc_download = doc.save("Report.docx")
 
     bio = io.BytesIO()
     doc_download.save(bio)
