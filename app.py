@@ -106,6 +106,12 @@ with tab3:
     p1 = doc_download.add_paragraph()
     run1 = p1.add_run(f"This report was prepared for compliance with {compliance_type} ")
 
+    p2 = doc_download.add_paragraph()
+    run2 = p2.add_run(f"This report was prepared for compliance with {compliance_type} ")
+
+    p3 = doc_download.add_paragraph()
+    run3 = p3.add_run(f"This report was prepared for compliance with {compliance_type} ")
+
     bio = io.BytesIO()
     doc_download.save(bio)
     if doc_download:
