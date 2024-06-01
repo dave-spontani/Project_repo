@@ -104,10 +104,10 @@ with tab3:
     p1 = doc.add_paragraph()
     run1 = p1.add_run(f"This report was prepared for compliance with {compliance_type} ")
 
-
+    
     
     ## Save the template for downloading
-    report_final = doc
+    report_final = doc.save("Report.docx")
 
     ## Creating download button with the updated notebook
-    st.download_button("Download report basis", report_final, "Word.docx")
+    st.download_button("Download report basis", report_final, "Report.docx")
