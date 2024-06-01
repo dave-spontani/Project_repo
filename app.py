@@ -1,6 +1,8 @@
 import streamlit as st
 import docx
 
+import io
+
 info_dict = {"C02_Emissions in Megatonnes this year": "", "Number of Women in Leadership positions as a percentage": "", "Anti-Corruption initiatives launches this year": ""}
 
 class Gen_Report:
@@ -104,10 +106,18 @@ with tab3:
     p1 = doc.add_paragraph()
     run1 = p1.add_run(f"This report was prepared for compliance with {compliance_type} ")
 
-    
-    
-    ## Save the template for downloading
-    report_final = doc.save("Report.docx")
+    doc_download = doc.save("Report.docx")
 
-    ## Creating download button with the updated notebook
-    st.download_button("Download report basis", report_final, "Report.docx")
+    bio = io.BytesIO()
+    doc_download.save(bio)
+    if doc_download:
+        st.download_button(
+            label="Click here to download",
+            data=bio.getvalue(),
+            file_name="Report.docx",
+            mime="docx"
+        )
+
+
+    # ## Creating download button with the updated notebook
+    # st.download_button("Download report basis", report_final, "Report.docx")
