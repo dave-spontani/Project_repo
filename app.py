@@ -105,7 +105,7 @@ with tab3:
     run1 = p1.add_run(f"This report was prepared for compliance with {compliance_type} ")
 
 
-        
+    
     # ## Save the template for downloading
     # report_final = 1
 
