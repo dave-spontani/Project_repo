@@ -91,11 +91,11 @@ with tab3:
 
     st.write("Please input the values for your chosen KPI.")
 
-    st.number_input(f"Please input a value for the following KPI: {options1}")
+    kpi1 = st.number_input(f"Please input a value for the following KPI: {options1}")
 
-    st.number_input(f"Please input the value for the following KPI: {options2}")
+    kpi2 = st.number_input(f"Please input the value for the following KPI: {options2}")
 
-    st.number_input(f"Please input any value for the following KPI: {options3}")
+    kpi3 = st.number_input(f"Please input any value for the following KPI: {options3}")
 
     ###Create the report:
     doc_download = docx.Document()
@@ -104,13 +104,13 @@ with tab3:
     run0 = p0.add_run(f"Report of {name} for the {type}")
 
     p1 = doc_download.add_paragraph()
-    run1 = p1.add_run(f"This report was prepared for compliance with {compliance_type} ")
+    run1 = p1.add_run(f"This report was prepared for compliance with {compliance_type}")
 
     p2 = doc_download.add_paragraph()
-    run2 = p2.add_run(f"This report was prepared for compliance with {compliance_type} ")
+    run2 = p2.add_run(f"This year, the company reports of the ")
 
     p3 = doc_download.add_paragraph()
-    run3 = p3.add_run(f"This report was prepared for compliance with {compliance_type} ")
+    run3 = p3.add_run(f"This report was prepared for compliance with {compliance_type}")
 
     bio = io.BytesIO()
     doc_download.save(bio)
