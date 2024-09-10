@@ -10,19 +10,19 @@ tab1, tab2, tab3 = st.tabs(["Questionnaire", "Questionnaire Part 2", "Final eval
 with tab1:
     st.title("Welcome to the the Mock-up Questionnaire")
 
-    hockey_score = st.slider("How much do you enjoy hockey?", min_value=1, max_value=7)
+    hockey_score = st.slider("How much do you enjoy hockey?", min_value=1, max_value=5)
 
-    football_score = st.slider("How much do you enjoy football?", min_value=1, max_value=7)
+    football_score = st.slider("How much do you enjoy football?", min_value=1, max_value=5)
     
 
 with tab2:
     st.title("Questionnaire Part 2")
     
-    rugby_score = st.slider("How much do you enjoy rugby?", min_value=1, max_value=7)
+    rugby_score = st.slider("How much do you enjoy rugby?", min_value=1, max_value=5)
 
-    tennis_score = st.slider("How much do you enjoy tennis?", min_value=1, max_value=7)
+    tennis_score = st.slider("How much do you enjoy tennis?", min_value=1, max_value=5)
 
-    triathlon_score = st.slider("How much do you enjoy Triathlon?", min_value=1, max_value=7)
+    triathlon_score = st.slider("How much do you enjoy Triathlon?", min_value=1, max_value=5)
 
 
 
