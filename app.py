@@ -22,7 +22,7 @@ with tab2:
 
     tennis_score = st.slider("How much do you enjoy tennis?", min_value=1, max_value=7)
 
-    tennis_score = st.slider("How much do you enjoy Triathlon?", min_value=1, max_value=7)
+    triathlon_score = st.slider("How much do you enjoy Triathlon?", min_value=1, max_value=7)
 
 
 
@@ -30,7 +30,7 @@ with tab3:
     st.write("Results") 
 
     df = pd.DataFrame(dict(
-    r=[hockey_score, football_score, 2, 2, 3],
+    r=[hockey_score, football_score, rugby_score, tennis_score , triathlon_score],
     theta=['Hockey','Football','Rugby',
            'Tennis', 'Triathlon']))
     fig = px.line_polar(df, r='r', theta='theta', line_close=True)
