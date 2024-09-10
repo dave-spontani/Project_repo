@@ -22,9 +22,9 @@ with tab2:
 
     tennis_score = st.slider("How much do you enjoy tennis?", min_value=1, max_value=7)
 
-    tennis_score = st.slider("How much do you enjoy tennis?", min_value=1, max_value=7)
+    tennis_score = st.slider("How much do you enjoy Triathlon?", min_value=1, max_value=7)
 
-    
+
 
 with tab3:
     st.write("Results") 
