@@ -33,5 +33,5 @@ with tab3:
     r=[hockey_score, football_score, rugby_score, tennis_score , triathlon_score],
     theta=['Hockey','Football','Rugby',
            'Tennis', 'Triathlon']))
-    fig = px.line_polar(df, r=5, theta='theta', line_close=True)
+    fig = px.line_polar(df, r="r", theta='theta', line_close=False)
     st.plotly_chart(fig)
