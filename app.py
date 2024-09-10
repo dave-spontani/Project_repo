@@ -2,26 +2,28 @@ import streamlit as st
 import docx
 import pandas as pd 
 import io
+import plotly.express as px
 
-info_dict = {"C02_Emissions in Megatonnes this year": "", "Number of Women in Leadership positions as a percentage": "", "Anti-Corruption initiatives launches this year": ""}
-
-class Gen_Report:
-
-    def __init__(self, x, y, z):
-        print("Create a new object of the CH_Report class")
-        self.name = x
-        self.type = y
-        self.code = z
-        self.information = info_dict
 
 tab1, tab2, tab3 = st.tabs(["Questionnaire", "Questionnaire Part 2", "Final evaluation"])
 
 with tab1:
     st.title("Welcome to the the Mock-up Questionnaire")
 
+    st.slider("How much do you enjoy hockey?", min_value=1, max_value=7)
+    
+
 with tab2:
     st.title("Questionnaire Part 2")
+    st.slider("How much do you enjoy football?", min_value=1, max_value=7)
 
 
 with tab3:
     st.write("Results") 
+
+    df = pd.DataFrame(dict(
+    r=[1, 5, 2, 2, 3],
+    theta=['processing cost','mechanical properties','chemical stability',
+           'thermal stability', 'device integration']))
+    fig = px.line_polar(df, r='r', theta='theta', line_close=True)
+    st.plotly_chart(fig)
