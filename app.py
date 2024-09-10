@@ -10,20 +10,28 @@ tab1, tab2, tab3 = st.tabs(["Questionnaire", "Questionnaire Part 2", "Final eval
 with tab1:
     st.title("Welcome to the the Mock-up Questionnaire")
 
-    st.slider("How much do you enjoy hockey?", min_value=1, max_value=7)
+    hockey_score = st.slider("How much do you enjoy hockey?", min_value=1, max_value=7)
+
+    football_score = st.slider("How much do you enjoy football?", min_value=1, max_value=7)
     
 
 with tab2:
     st.title("Questionnaire Part 2")
-    st.slider("How much do you enjoy football?", min_value=1, max_value=7)
+    
+    rugby_score = st.slider("How much do you enjoy rugby?", min_value=1, max_value=7)
 
+    tennis_score = st.slider("How much do you enjoy tennis?", min_value=1, max_value=7)
+
+    tennis_score = st.slider("How much do you enjoy tennis?", min_value=1, max_value=7)
+
+    
 
 with tab3:
     st.write("Results") 
 
     df = pd.DataFrame(dict(
-    r=[1, 5, 2, 2, 3],
-    theta=['processing cost','mechanical properties','chemical stability',
-           'thermal stability', 'device integration']))
+    r=[hockey_score, football_score, 2, 2, 3],
+    theta=['Hockey','Football','Rugby',
+           'Tennis', 'Triathlon']))
     fig = px.line_polar(df, r='r', theta='theta', line_close=True)
     st.plotly_chart(fig)
