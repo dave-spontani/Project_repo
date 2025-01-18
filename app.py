@@ -45,9 +45,3 @@ with tab2:
 with tab3:
     st.write("Results") 
 
-    df = pd.DataFrame(dict(
-    r=[hockey_score, football_score, rugby_score, tennis_score , triathlon_score],
-    theta=['Hockey','Football','Rugby',
-           'Tennis', 'Triathlon']))
-    fig = px.line_polar(df, r="r", theta='theta', line_close=True)
-    st.plotly_chart(fig)
