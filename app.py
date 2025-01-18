@@ -91,9 +91,9 @@ buetton = st.button("Alright, we are ready. Press this button to see your profil
 if buetton:
     st.write("HAHA! I actually have results here!")
     st.write(f"It looks like you are a {saver_profile}-{risk_profile}-{style_profile}-{sust_profile}")
-    st.write("This means you prefer:")
+    st.write("This means you:")
     time.sleep(1)
-    st.write("More of a Saver (S) or an Enjoyer (E)")
+    st.write("Are more of a Saver (S) or an Enjoyer (E)")
     time.sleep(1)
     st.write("Prefer potentially Volatile Investments (V) or more conservative investments (C)")
     time.sleep(1)
