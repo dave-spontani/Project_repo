@@ -44,7 +44,7 @@ with tab2:
     st.write("Here, obviously it would be different questions so we can arrive at a profile for the person. As a placeholder, they will just tell us.")
     st.subheader("Savings rate")
     st.write(f"It looks like your savings rate is {savings_rate}%")
-    if savings_rate < 0.25:
+    if savings_rate < 25:
         st.write("This puts you into the 'Small saver category'")
         saver_profile = "S" ##Saver
     else:
