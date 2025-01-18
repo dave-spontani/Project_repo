@@ -68,7 +68,7 @@ with tab2:
     if style == "Traditional":
         style_profile = "T" ##Traditional
     else: 
-        style_profile = "A" ##New-Age
+        style_profile = "N" ##New-Age
 
 
     st.subheader("Sustainability preferences")
