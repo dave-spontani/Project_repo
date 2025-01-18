@@ -63,7 +63,7 @@ with tab2:
     st.subheader("Investments")
     style = st.selectbox(
     "Do you want to invest in Traditional (Stocks, Bonds) or more Non-Traditional Investments (i.e Cryptocurrencies, Alternative investments)?",
-    ("Traditional", "Nom-Traditional"),)
+    ("Traditional", "Non-Traditional"),)
 
     if style == "Traditional":
         style_profile = "T" ##Traditional
