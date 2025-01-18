@@ -13,7 +13,7 @@ with tab1:
     st.write("Lets start with some questions. First off, let us define your budget goals!")
 
 
-    st.subtitle("Lets start by setting some goals!")
+    st.header("Lets start by setting some goals!")
     st.write("Do you have a regular income? If yes, how high is your salary (how much lands on your bank account)?")
     salary = st.number_input("Input your salary here")
     st.write("Great! Next, allocate a budget to your most used categories. A suggestion list is down below. Feel free to add other categories.")
