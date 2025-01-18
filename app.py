@@ -82,27 +82,27 @@ with tab2:
     else: 
         sust_profile = "M" ##Markets
 
-st.write("Thank you! We will calculate the results. Just a moment")
+    st.write("Thank you! We will calculate the results. Just a moment")
 
-time.sleep(3)
+    time.sleep(3)
 
-buetton = st.button("Alright, we are ready. Press this button to see your profile results")
+    buetton = st.button("Alright, we are ready. Press this button to see your profile results")
 
-if buetton:
-    st.write("HAHA! I actually have results here!")
-    st.write(f"It looks like you are a {saver_profile}-{risk_profile}-{style_profile}-{sust_profile}")
-    st.write("This means you:")
-    time.sleep(1)
-    st.write("Are more of a Saver (S) or an Enjoyer (E)")
-    time.sleep(1)
-    st.write("Prefer potentially Volatile Investments (V) or more conservative investments (C)")
-    time.sleep(1)
-    st.write("Want to invest in more Sustainable (S) or more Market-oriented (M) solutions")
-    time.sleep(2)
+    if buetton:
+        st.write("HAHA! I actually have results here!")
+        st.write(f"It looks like you are a {saver_profile}-{risk_profile}-{style_profile}-{sust_profile}")
+        st.write("This means you:")
+        time.sleep(1)
+        st.write("Are more of a Saver (S) or an Enjoyer (E)")
+        time.sleep(1)
+        st.write("Prefer potentially Volatile Investments (V) or more conservative investments (C)")
+        time.sleep(1)
+        st.write("Want to invest in more Sustainable (S) or more Market-oriented (M) solutions")
+        time.sleep(2)
 
-    st.write("Our Robo-Advisor has done its thing and punched up a portfolio for you. Have a look!")
+        st.write("Our Robo-Advisor has done its thing and punched up a portfolio for you. Have a look!")
 
-    brutton = st.button("This totally takes you to a portfolio, I swear")
+        brutton = st.button("This totally takes you to a portfolio, I swear")
 
 
 with tab3:
