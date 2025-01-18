@@ -104,9 +104,6 @@ if buetton:
 
     brutton = st.button("This totally takes you to a portfolio, I swear")
 
-    if brutton: 
-        st.write("Psych!")
-
 
 with tab3:
     st.write("Results") 
