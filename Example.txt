@@ -1,31 +1,29 @@
-This is some example code found online:
-
-SET vDummyVar = 'RandomValue';
+SET vDummyVar = 'AnotherRandomValue';
 
 DummyTable:
 LOAD 
-    AutoNumber(RowNo()) AS ID,
-    Chr(65 + Mod(RowNo(), 26)) AS RandomChar,
-    Now() AS CurrentTimestamp,
-    Ceil(Rand()*100) AS RandomNumber
-AUTOGENERATE 10;
+    AutoNumber(RowNo()) AS UniqueID,
+    Chr(66 + Mod(RowNo(), 25)) AS RandomLetter,
+    Timestamp(Now(), 'YYYY-MM-DD hh:mm:ss') AS CurrentTimestamp,
+    Floor(Rand()*200) AS RandomValue
+AUTOGENERATE 15;
 
 JOIN (DummyTable)
 LOAD 
-    ID,
-    Hash128(RandomChar & CurrentTimestamp) AS HashedValue
+    UniqueID,
+    Hash256(RandomLetter & CurrentTimestamp) AS EncryptedValue
 RESIDENT DummyTable;
 
-DROP FIELD RandomChar;
+DROP FIELD RandomLetter;
 
-LET vCalcVar = Peek('RandomNumber', 5, 'DummyTable') * 3.14;
+LET vNewCalc = Peek('RandomValue', 7, 'DummyTable') * 2.71;
 
-IF $(vCalcVar) > 50 THEN
-    TRACE 'The calculated variable is quite large!';
+IF $(vNewCalc) > 75 THEN
+    TRACE 'Wow, that is quite a big number!';
 ELSE
-    TRACE 'Nothing special about this number.';
+    TRACE 'Just an average number, nothing crazy.';
 ENDIF;
 
-STORE DummyTable INTO [lib://DataFiles/DummyTable.qvd] (qvd);
+STORE DummyTable INTO [lib://DataFiles/DummyData.qvd] (qvd);
 
-TRACE 'Gibberish Qlik script executed successfully!';
+TRACE 'Modified gibberish Qlik script executed successfully!';
