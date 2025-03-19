@@ -1,0 +1,31 @@
+This is some example code found online:
+
+SET vDummyVar = 'RandomValue';
+
+DummyTable:
+LOAD 
+    AutoNumber(RowNo()) AS ID,
+    Chr(65 + Mod(RowNo(), 26)) AS RandomChar,
+    Now() AS CurrentTimestamp,
+    Ceil(Rand()*100) AS RandomNumber
+AUTOGENERATE 10;
+
+JOIN (DummyTable)
+LOAD 
+    ID,
+    Hash128(RandomChar & CurrentTimestamp) AS HashedValue
+RESIDENT DummyTable;
+
+DROP FIELD RandomChar;
+
+LET vCalcVar = Peek('RandomNumber', 5, 'DummyTable') * 3.14;
+
+IF $(vCalcVar) > 50 THEN
+    TRACE 'The calculated variable is quite large!';
+ELSE
+    TRACE 'Nothing special about this number.';
+ENDIF;
+
+STORE DummyTable INTO [lib://DataFiles/DummyTable.qvd] (qvd);
+
+TRACE 'Gibberish Qlik script executed successfully!';
