@@ -1,29 +1,30 @@
-SET vDummyVar = 'AnotherRandomValue';
+SET vWeirdVar = 'UnusualValue';
 
-DummyTable:
+StrangeTable:
 LOAD 
-    AutoNumber(RowNo()) AS UniqueID,
-    Chr(66 + Mod(RowNo(), 25)) AS RandomLetter,
-    Timestamp(Now(), 'YYYY-MM-DD hh:mm:ss') AS CurrentTimestamp,
-    Floor(Rand()*200) AS RandomValue
-AUTOGENERATE 15;
+    RecNo() AS RowIndex,
+    Text(Left(Hash128(Rand()), 8)) AS WeirdCode,
+    Year(Today()) - Floor(Rand()*50) AS RandomYear,
+    Num(Rand()*999, '#.##') AS FloatingValue
+AUTOGENERATE 20;
 
-JOIN (DummyTable)
-LOAD 
-    UniqueID,
-    Hash256(RandomLetter & CurrentTimestamp) AS EncryptedValue
-RESIDENT DummyTable;
+Concatenate (StrangeTable)
+LOAD
+    RowIndex + 100 AS RowIndex,
+    'X' & Right(WeirdCode, 4) AS AlteredCode,
+    RandomYear + 5 AS FutureYear,
+    FloatingValue * Pi() AS AdjustedValue
+RESIDENT StrangeTable;
 
-DROP FIELD RandomLetter;
+DROP FIELD WeirdCode;
 
-LET vNewCalc = Peek('RandomValue', 7, 'DummyTable') * 2.71;
+LET vMysteryNumber = Peek('AdjustedValue', 3, 'StrangeTable') + 42;
 
-IF $(vNewCalc) > 75 THEN
-    TRACE 'Wow, that is quite a big number!';
-ELSE
-    TRACE 'Just an average number, nothing crazy.';
-ENDIF;
+DO WHILE $(vMysteryNumber) > 100
+    LET vMysteryNumber = vMysteryNumber - 10;
+    TRACE 'Adjusting mystery number: ' & $(vMysteryNumber);
+LOOP
 
-STORE DummyTable INTO [lib://DataFiles/DummyData.qvd] (qvd);
+STORE StrangeTable INTO [lib://DataFiles/StrangeTable.qvd] (qvd);
 
-TRACE 'Modified gibberish Qlik script executed successfully!';
+TRACE 'Another gibberish Qlik script successfully executed!';
