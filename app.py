@@ -13,11 +13,11 @@ st.write("This site truly offers the cream of the crop when it comes to handsome
 st.write("We offer a wide array of services, and our top guys are at your disposal. Fees and payment are determined seperately for each booking request")
 st.write("To tease you a bit, here are a few shots of our top model:")
 
-##st.image(image, caption=None)
+st.image("IMG_20191230_092602.jpg", caption=None)
 
-##st.image(image, caption=None,)
+st.image("IMG-20201231-WA0000.jpg", caption=None,)
          
-##st.image(image, caption=None,)
+st.image("IMG-20210208-WA0008.jpg", caption=None,)
 
 user_input = st.text_area("Please describe what you want to rent your handsome Mexican for:", "Nothing here yet...")
 
